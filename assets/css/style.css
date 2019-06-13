@@ -88,12 +88,30 @@ nav ul li a {
 /*profile images*/
 
 .art-flyer img {
-    object-fit: cover;
-    height:300px;
-    width: 400px;
+    
+    background: #76232f;
+    height: 330px;
+    padding: 4px ;
+    opacity: .8;
+   float: center;
+
 }
 .first-column-p {
     padding-top: 41px;
+}
+.text1 {
+    background: maroon;
+    font-size:1.7em;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    height:30px;
+    width:300px;
+
+    
+	float: inline-start;
+    
+    
 }
 
 /*end of profile image css*/
@@ -117,6 +135,12 @@ nav ul li a {
     margin-bottom: 10px;
 }
 .content-3-columns {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    
+}
+.content-3-columns2 {
     padding-top: 40px;
     padding-bottom: 40px;
     text-align: center;
@@ -209,9 +233,9 @@ nav ul li a {
 
 .three2 {
     
-	width: 23.5%;
+	
 	float:left;
-    margin-left: 4%;
+    
     padding-left: 70px;
 }
 .two {
@@ -306,13 +330,79 @@ nav ul li a {
 
 /*responsive Design layouts this is a media query*/
 
+@media only screen and (max-width: 1290px) {
+    
+    .art-flyer img {
+    
+        background: #76232f;
+        height: 500px;
+        width: 500px;
+        
+        padding: 4px ;
+        opacity: .8;
+       float: center;
+    
+    }
+    .three2 {
+        float:right;
+        padding-left: 70px;
+    }
+    .text1 {
+        background: maroon;
+        font-size:1.7em;
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+    height: 30px;
+    width: 390px;
+        
+        float: inline-start;
+        
+        
+    }
+    .content-3-columns2 {
+    
+        padding-top: 40px;
+        padding-bottom: 40px;
+       
+    text-align: left;
+    
+}
+
  @media only screen and (max-width: 980px) {
     footer{
         height: 450px
     }
+
+    .art-flyer img {
+    
+        background: #76232f;
+        height: 390px;
+        width: 390px;
+        padding: 4px ;
+        opacity: .8;
+       float: center;
+    
+    }
+    .text1 {
+        background: maroon;
+        font-size:1.7em;
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+    height: 30px;
+    width: 390px;
+        
+        float: inline-start;
+        
+        
+    }
+    
 }
 
  /*second media query to make everything on its own row when screen gets bellow 753px*/
+
+
 
 @media only screen and (max-width: 768px) {
 .one, .two, .three, .three2, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven {
@@ -347,6 +437,36 @@ nav ul li a {
     font-family: 'Tangerine', cursive;
     font-size: 1.3em;
 }
+.art-flyer img {
+    
+    
+    background: #76232f;
+    height: 300px;
+    width: 300px;
+    padding: 4px ;
+    opacity: .8;
+   float: center;
+
+}
+.text1 {
+    background: maroon;
+    font-size:1.7em;
+    text-align: center;
+    padding: 10px;
+    width: 300px;
+    margin: 10px;
+
+    
+    float: inline-start;
+    
+    
+}
+.content-3-columns2 {
+    
+        padding-top: 40px;
+        padding-bottom: 40px;
+       
+    text-align: left;
 }
 
 @media only screen and (max-width: 640px){
@@ -382,5 +502,27 @@ nav ul li a {
     p{
         font-size: 1em !important;
     }
+    .text1 {
+        background: maroon;
+        font-size:1.7em;
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+    
+        
+        float: inline-start;
+        
+    }
+    .art-flyer img {
+    
+        background: #76232f;
+        height: 300px;
+        width: 300px;
+        padding: 4px ;
+        opacity: .8;
+       float: center;
+    
+    }
+    
 }
 
