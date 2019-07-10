@@ -1,8 +1,8 @@
 var raiden = {
-    raidenHealth: 200,
-    raidenAttack: 50,
-    enemyRaidenHealth: 100,
-    enemyRaidenAttack: 20,
+    raidenHealth: 210,
+    raidenAttack: 30,
+    enemyRaidenHealth: 210,
+    enemyRaidenAttack: 30,
     whoRaiden: function(){
         console.log(this);
     },
@@ -14,10 +14,10 @@ var raiden = {
     }
 };
 var scorpion = {
-    scorpionHealth: 110,
-    scorpionAttack: 20,
-    enemyScorpionHealth: 160,
-    enemyScorpionAttack: 30,
+    scorpionHealth: 170,
+    scorpionAttack: 25,
+    enemyScorpionHealth: 170,
+    enemyScorpionAttack: 25,
     whoScorpion: function(){
         console.log(this);
     },
@@ -29,10 +29,10 @@ var scorpion = {
     }
 };
 var sweetTooth = {
-    sweetToothHealth: 130,
-    sweetToothAttack: 10,
-    enemySweetToothHealth: 150,
-    enemySweetToothAttack: 60,
+    sweetToothHealth: 190,
+    sweetToothAttack: 40,
+    enemySweetToothHealth: 190,
+    enemySweetToothAttack: 40,
     whoSweetTooth: function(){
         console.log(this);
     },
@@ -44,10 +44,10 @@ var sweetTooth = {
     }
 };
 var liuKang = {
-    liuKangHealth: 100,
+    liuKangHealth: 200,
     liuKangAttack: 45,
-    enemyLiuKangHealth: 20,
-    enemyLiuKangAttack: 200,
+    enemyLiuKangHealth: 200,
+    enemyLiuKangAttack: 45,
     whoIsLiuKang: function(){
         console.log(this);
     },
@@ -175,12 +175,23 @@ function buttonPress4E(){
        
 
         $("#fight").on("click", function(){
+                console.log(enemyHealth, heroHealth);
                 var newEnemyHealth = (enemyHealth[0] - heroAttack[0]);
                 var newHeroHealth = (heroHealth[0] - enemyAttack[0] );
                 heroHealthDisplay.innerText = "hero health: " + newHeroHealth;
                 enemyHealthDisplay.innerText = "enemy health: " + newEnemyHealth;
-                console.table(newEnemyHealth, newHeroHealth, turnCounter, killCount);
                 turnCounter++
+                console.table(newEnemyHealth, newHeroHealth, turnCounter, killCount);
+                
+                if(newEnemyHealth < 1){
+                    alert("you win");
+                    killCount++
+                   //$(enemyArea).remove();
+                   $(`div#enemy-area > img`).remove();
+                }
+                if(newHeroHealth < 1){
+                    alert("game over")
+                }
                 $("#fight").off('click');
                   
         $("#fight").on("click", function(){
@@ -213,14 +224,122 @@ function buttonPress4E(){
                         if(new4EnemyHealth < 1){
                             alert("you win");
                             killCount++
-
+                           //$(enemyArea).remove();
+                           $(`div#enemy-area > img`).remove();
                         }
                         if(new4HeroHealth < 1){
                             alert("game over")
                         }
                         console.log(new4EnemyHealth, new4HeroHealth, turnCounter, killCount);
                         $("#fight").off('click');
+                         
+                        
+                    $("#fight").on("click", function(){
+                        new5EnemyHealth = (new4EnemyHealth - heroAttack[0]);
+                        new5HeroHealth = (new4HeroHealth - enemyAttack[0]);
+                        heroHealthDisplay.innerText = "hero health: " + new5HeroHealth;
+                        enemyHealthDisplay.innerText = "enemy health: " + new5EnemyHealth;         
+                        turnCounter++
+                        if(new5EnemyHealth < 1){
+                            alert("you win");
+                            killCount++
+                           //$(enemyArea).remove();
+                           $(`div#enemy-area > img`).remove();
+                        }
+                        if(new5HeroHealth < 1){
+                            alert("game over")
+                        }
+                        console.log(new5EnemyHealth, new5HeroHealth, turnCounter, killCount);
+                        $("#fight").off('click');
+
+                        $("#fight").on("click", function(){
+                            var new6EnemyHealth = (new5EnemyHealth - heroAttack[0]);
+                            var new6HeroHealth = (new5HeroHealth - enemyAttack[0] );
+                            heroHealthDisplay.innerText = "hero health: " + new6HeroHealth;
+                            enemyHealthDisplay.innerText = "enemy health: " + new6EnemyHealth;
+                            turnCounter++
+                            if(new6EnemyHealth < 1){
+                            alert("you win");
+                            killCount++
+                            $(`div#enemy-area > img`).remove();
+
+                            //new6EnemyHealth
+
+                            $(buttonPress2E, buttonPress1E, buttonPress3E, buttonPress4E).on("click", function(){
+                                 new6EnemyHealth = enemyHealth;
+                                 console.log(new6EnemyHealth);
+                            })
+                            
+                           //$(enemyHealth).push(new6EnemyHealth);
+                            }
+                            if(new6HeroHealth < 1){
+                                alert("game over")
+                            }
+                            console.table(new6EnemyHealth, new6HeroHealth, turnCounter, killCount);
+                            $("#fight").off('click');
+
+                            $("#fight").on("click", function(){
+                                var new7EnemyHealth = (new6EnemyHealth - heroAttack[0]);
+                                var new7HeroHealth = (new6HeroHealth - enemyAttack[0] );
+                                heroHealthDisplay.innerText = "hero health: " + new7HeroHealth;
+                                enemyHealthDisplay.innerText = "enemy health: " + new7EnemyHealth;
+                                turnCounter++
+                                if(new7EnemyHealth < 1){
+                                alert("you win");
+                                killCount++
+                                $(`div#enemy-area > img`).remove();
+                                }
+                                if(new7HeroHealth < 1){
+                                    alert("game over")
+                                }
+                                console.table(new7EnemyHealth, new7HeroHealth, turnCounter, killCount);
+                                $("#fight").off('click');
+
+                                $("#fight").on("click", function(){
+                                    var new8EnemyHealth = (new7EnemyHealth - heroAttack[0]);
+                                    var new8HeroHealth = (new7HeroHealth - enemyAttack[0] );
+                                    heroHealthDisplay.innerText = "hero health: " + new8HeroHealth;
+                                    enemyHealthDisplay.innerText = "enemy health: " + new8EnemyHealth;
+                                    turnCounter++
+                                    if(new8EnemyHealth < 1){
+                                    alert("you win");
+                                    killCount++
+                                    $(`div#enemy-area > img`).remove();
+                                    }
+                                    if(new8HeroHealth < 1){
+                                        alert("game over")
+                                    }
+                                    console.table(new8EnemyHealth, new8HeroHealth, turnCounter, killCount);
+                                    $("#fight").off('click');
+
+                                    $("#fight").on("click", function(){
+                                        var new9EnemyHealth = (new8EnemyHealth - heroAttack[0]);
+                                        var new9HeroHealth = (new8HeroHealth - enemyAttack[0] );
+                                        heroHealthDisplay.innerText = "hero health: " + new9HeroHealth;
+                                        enemyHealthDisplay.innerText = "enemy health: " + new9EnemyHealth;
+                                        turnCounter++
+                                        if(new9EnemyHealth < 1){
+                                        alert("you win");
+                                        killCount++
+                                        $(`div#enemy-area > img`).remove();
+                                        let
+                                        }
+                                        if(new9HeroHealth < 1){
+                                            alert("game over")
+                                        }
+                                        console.table(new9EnemyHealth, new9HeroHealth, turnCounter, killCount);
+                                        $("#fight").off('click');
+                                    })
+
+                                })
+
+                            })
+
+                        })
+
                                       
+                    })
+
                     })
                                 
                    })
