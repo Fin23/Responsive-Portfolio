@@ -6,9 +6,7 @@ var raiden = {
      whoRaiden: function(){
          console.log(this);
      }
-  
 };
-
 var scorpion = {
     Health: 170,
     Attack: 25,
@@ -16,8 +14,7 @@ var scorpion = {
     enemyAttack: 25,
     whoScorpion: function(){
         console.log(this);
-    }
-    
+    }  
 };
 var sweetTooth = {
     Health: 190,
@@ -27,7 +24,6 @@ var sweetTooth = {
     whoSweetTooth: function(){
         console.log(this);
     }
-  
 };
 var liuKang = {
     Health: 200,
@@ -37,19 +33,12 @@ var liuKang = {
     whoIsLiuKang: function(){
         console.log(this);
     }
-  
 };
-
-
-
-
 //console logs all parts of the object
  raiden.whoRaiden();
  scorpion.whoScorpion();
  sweetTooth.whoSweetTooth();
  liuKang.whoIsLiuKang();
-
-
 
     console.log(this)
 
@@ -144,115 +133,74 @@ var heroAttack = 0;
 var enemyHealth = 0;
 var enemyAttack = 0;
        
-        var turnCounter = 0;
-        var killCount = 0;
+var turnCounter = 0;
+var killCount = 0;
+
+var increaseAttack = 35;
+var increaseHealth = 100;
 
 
-
+//created functions to attach to the fight button 
        
          function newEnemyHealth(){
-             enemyHealth = enemyHealth - heroAttack;
+            enemyHealth = enemyHealth - heroAttack;
             console.log(enemyHealth);
             enemyHealthDisplay.innerText = "enemy health: " + enemyHealth;
+            enemyAttackDisplay.innerText = "enemy attack: " + enemyAttack;
             
          }
          function newHeroHealth(){
-             heroHealth = heroHealth - enemyAttack;
+            heroHealth = heroHealth - enemyAttack;
             console.log(heroHealth)
             heroHealthDisplay.innerText = "hero health: " + heroHealth;
+            heroAttackDisplay.innerText = "hero attack: " + heroAttack;
          }
 
          function isHeroAlive () {
              if ( heroHealth < 1){
                  alert("you lose")
+                 heroArea.innerHTML = null;
                  return true;
              }
              return false;
          }
          function isEnemyAlive () {
             if (enemyHealth < 1 ){
-                alert("you win")
+                
                 killCount++
+               heroHealth = heroHealth + increaseHealth;
+               heroAttack = heroAttack + increaseAttack;
+               enemyArea.innerHTML = null;
+                alert("you win")
+                return true;
+            }
+            return false;
+        }
+        function isTie () {
+            if ( heroHealth < 1 && enemyHealth < 1){
+                alert("you killed each other")
                 return true;
             }
             return false;
         }
 
 
-//test out for loop to the code is more dry and not as many repeated on click functions below 
+//fight button  
 
 
 $("#fight").on("click", function (){
     console.log(enemyHealth, heroHealth);
     newEnemyHealth();
     newHeroHealth();
+    isTie();
     isHeroAlive();
     isEnemyAlive();
     turnCounter++
     console.log( turnCounter, killCount);
+    
      
 });
     
 
         
      
-
-
- 
-
-
-
-
-
-       
-        //                             $(`div#enemy-area > img`).remove();
-        //                             }
-        //                             if(new8HeroHealth < 1){
-        //                                 alert("game over")
-        //                             }
-        //                             console.table(new8EnemyHealth, new8HeroHealth, turnCounter, killCount);
-        //                             $("#fight").off('click');
-
-        //                             $("#fight").on("click", function(){
-        //                                 var new9EnemyHealth = (new8EnemyHealth - heroAttack[0]);
-        //                                 var new9HeroHealth = (new8HeroHealth - enemyAttack[0] );
-        //                                 heroHealthDisplay.innerText = "hero health: " + new9HeroHealth;
-        //                                 enemyHealthDisplay.innerText = "enemy health: " + new9EnemyHealth;
-        //                                 turnCounter++
-        //                                 if(new9EnemyHealth < 1){
-        //                                 alert("you win");
-        //                                 killCount++
-        //                                 $(`div#enemy-area > img`).remove();
-        //                                 let
-        //                                 }
-        //                                 if(new9HeroHealth < 1){
-        //                                     alert("game over")
-        //                                 }
-        //                                 console.table(new9EnemyHealth, new9HeroHealth, turnCounter, killCount);
-        //                                 $("#fight").off('click');
-        //                             })
-
-        //                         })
-
-        //                     })
-
-        //                 })
-
-                                      
-        //             })
-
-        //             })
-                                
-        //            })
-                             
-        //             }) 
-
-        //             })
-        
-        
-    
-        
-     
-     
-
-         
