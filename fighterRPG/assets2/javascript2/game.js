@@ -144,14 +144,13 @@ var increaseHealth = 100;
        
          function newEnemyHealth(){
             enemyHealth = enemyHealth - heroAttack;
-            console.log(enemyHealth);
             enemyHealthDisplay.innerText = "enemy health: " + enemyHealth;
             enemyAttackDisplay.innerText = "enemy attack: " + enemyAttack;
             
          }
          function newHeroHealth(){
             heroHealth = heroHealth - enemyAttack;
-            console.log(heroHealth)
+            console.log(heroHealth, enemyHealth );
             heroHealthDisplay.innerText = "hero health: " + heroHealth;
             heroAttackDisplay.innerText = "hero attack: " + heroAttack;
          }
@@ -171,6 +170,9 @@ var increaseHealth = 100;
                heroHealth = heroHealth + increaseHealth;
                heroAttack = heroAttack + increaseAttack;
                enemyArea.innerHTML = null;
+              
+                //$("#fight").off('click');
+            
                 alert("you win")
                 return true;
             }
@@ -189,13 +191,17 @@ var increaseHealth = 100;
 
 
 $("#fight").on("click", function (){
-    console.log(enemyHealth, heroHealth);
+    console.log(heroHealth, enemyHealth);
     newEnemyHealth();
     newHeroHealth();
     isTie();
     isHeroAlive();
     isEnemyAlive();
     turnCounter++
+   
+    if(killCount > 2){
+        alert("you are the champion!")
+    }
     console.log( turnCounter, killCount);
     
      
