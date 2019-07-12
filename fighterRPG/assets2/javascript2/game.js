@@ -151,16 +151,15 @@ var enemyAttack = 0;
 
        
          function newEnemyHealth(){
-                        enemyHealth2 = enemyHealth - heroAttack;
-                    
+            var enemyHealth2 = enemyHealth - heroAttack;
             console.log(enemyHealth2);
+            enemyHealthDisplay.innerText = "hero health: " + enemyHealth2;
+            
          }
-         
-
-         
          function newHeroHealth(){
-             heroHealth2 = heroHealth - enemyAttack;
-              console.log(heroHealth2)
+            var heroHealth2 = heroHealth - enemyAttack;
+            console.log(heroHealth2)
+            heroHealthDisplay.innerText = "enemy health: " + heroHealth2;
          }
 
          function isAlive () {
