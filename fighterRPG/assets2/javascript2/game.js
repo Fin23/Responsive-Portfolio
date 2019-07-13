@@ -139,6 +139,18 @@ var killCount = 0;
 var increaseAttack = 35;
 var increaseHealth = 100;
 
+var firebaseConfig = {
+    apiKey: "AIzaSyA9f_1faTrIXwgQGzjepWHKmqz0w41k9og",
+    authDomain: "test-project-1-322a8.firebaseapp.com",
+    databaseURL: "https://test-project-1-322a8.firebaseio.com",
+    projectId: "test-project-1-322a8",
+    storageBucket: "",
+    messagingSenderId: "486797615354",
+    appId: "1:486797615354:web:9553841c6bd06da9"
+  };
+  firebase.initializeApp(firebaseConfig);
+  var database = firebase.database();
+
 
 //created functions to attach to the fight button 
        
@@ -203,6 +215,46 @@ $("#fight").on("click", function (){
         alert("you are the champion!")
     }
     console.log( turnCounter, killCount);
+
+
+    $("#fight").on("click", function (event) {
+        event.preventDefault();
+     
+     
+    //console.log(converMonthsWorked);
+         name = $("#hero-health").val().trim();
+         role = $("#hero-attack").val().trim();
+         startDate = $("#enemy-health").val().trim();
+         monthlyRate= $("#enemy-attack").val().trim();
+    
+         //monthsWorked = todayDate -startDate;
+    
+     database.ref().push({
+         name: name,
+         role: role,
+         startDate: startDate,
+         monthlyRate: monthlyRate,
+         dateAdded: firebase.database.ServerValue.TIMESTAMP
+    
+     
+        
+     });
+    });
+    
+    database.ref().on("child_added", function(snapshot) {
+        var sv = snapshot.val();
+        
+        console.log(sv.name);
+        console.log(sv.role);
+        console.log(sv.startDate);
+        console.log(sv.monthlyRate);
+        console.log(sv.dateAdded);
+        console.log(ts.toDateString());
+        });
+
+
+
+
     
      
 });
