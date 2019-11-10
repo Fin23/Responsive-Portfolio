@@ -175,7 +175,8 @@
 }
 
 .demo--current {
-	opacity: 0.5;
+	/* opacity: 0.5; */
+	color:#c06e84;
 }
 
 @media screen and (min-width: 55em) {
