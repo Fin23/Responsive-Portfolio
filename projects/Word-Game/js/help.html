@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>let's guess a word</h2>
+    <form>
+        <input type="text" placeholder="enter your guess">
+        <input type="button" value="submit guess">
+        <input type="button" value="play again?">
+    </form>
+</body>
+</html>
+
+
+<!--gen random numbner and capture guess compair change interface for outcome-->
+
+var secretWord = Math.random();
+
+
+function resetGame(){
+    document.getElementById("play-again");
+    document.getElementById("user-guess").value="";
+
+
+}
+
+//create an alert that starts game and generates the underscores 
+function playGame() {
+    userGuess = document.getElementById("user-guess").value;
+    if(userGuess == choosenWord){
+        alert("Winner!")
+        docWins[0].innerHTML = +"wins" + wins++
+    }
+}
+playGame();
+
+
+<form action="javascript:void(0);">
+        
+        <input id="user-guess" type="text" placeholder="enter your guess">    
+       <div class="button"> 
+           <span>
+               <input type="button" value="submit guess" onclick="playGame();">
+    </span>
+</div>
+<div class="button">   
+<span>
+<input id="play-again" type="button" value="play again?" onclick="resetGame();">
+</span>
+</div>
+</form> 

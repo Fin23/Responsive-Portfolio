@@ -1,0 +1,4 @@
+# RPS-Multiplayer
+rock paper scissors game, using firebase to store data, also has a working local server when typing in node server.js in the bash terminal 
+
+at this point the the button are functional in the sense that each press registers and sends its data to fire base and the data in fire based is organized by player 1 and player two and then both of those catagories are split into their respective button presses showing how many times each player pressed each button, also fire base logs out how many individual turns have gone, you can also type in the little chat box below and when you hit the say button that chat string is also saved in firebase. 

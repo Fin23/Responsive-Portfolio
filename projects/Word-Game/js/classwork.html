@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hangman Game</title>
+</head>
+
+<body>
+  <h1>Hangman Game</h1>
+  <h2 id="write-greeting">Hi fool</h2>
+  <div id ="win">Wins</div>
+  <div id ="loss">Losses</div>
+  <div>Letters Guessed</div>
+
+  <body onload="startGame()">
+    <div class="game-box">
+      <input id="letter" type="text">
+      <input type="button" value ="letter" onClick="Letter()"/>
+      <br />
+      <div id ="answer"></div>
+      <div id="letters-guessed"></div>
+    </div>
+  </body>
+  <script type="text/javascript">
+
+    var array = ["reese", "ross", "sam", "peter", "ali", "joe"];
+    var wins = 0;
+    var loss = 0;
+    var guessesRemaining = 10;
+    var randNum = Math.floor(Math.random() * array.length);
+    var choosenWord = array[randNum];
+    var answerArray = [];
+    var anwSir;
+    console.log(choosenWord);
+    var name = prompt("What is your name?");
+        document.getElementById('write-greeting').innerHTML = ("Hello " + name + "," + " let's begin!");
+
+    function startGame() {
+      for (var i = 0; i < choosenWord.length; i++) {
+        answerArray[i] = " _ ";
+      }
+        anwSir = answerArray.join('');
+        document.getElementById('answer').innerHTML = anwSir;
+  
+    }
+      
+        //key listener to put write and wrong words in correct area
+        document.addEventListener('keypress' ,(event) => {
+
+        var keyword = String.fromCharCode(event.keyCode);
+
+document.getElementById('win').textContent="Wins: " + wins;
+document.getElementById('loss').textContent="Loss: " + loss;
+if (keypress = choosenWord.value){
+    keypress.push(answerArray)
+}
+
+
+
+       
+      
+    function Letter() {
+    var letter = document.getElementById('letter').value;
+
+    if (letter.length > 0) {
+        for (var i = 0; i < choosenWord.length; i++) {
+            if (choosenWord[i] === letter) {
+                answerArray[i] = letter;
+                break;
+
+            }
+
+        }
+        document.getElementById('answer').innerhtml = answerArray.join('');
+      }
+    }
+   
+});
+
+
+
+  </script>
+</body>
+
+</html>

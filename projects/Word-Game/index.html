@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!--reset csslink rel="stylesheet" type="text/css" href="css/reset.css"-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Rosco's Modern Word Game</title>
+</head>
+       
+
+
+<body  background="img\rocko.JPG">
+
+    
+ <div class="container">
+     <header>
+            <span class="wins">WINS</span>
+            <span class="welcome">Welcome one and all!</span>
+            <span class="loss">Loses</span>
+           
+            
+            <h2 id="display-message">Color's!</h2>
+            <div onclick="myFunction();" class="button"><span>Start</span></div>
+
+
+           <!-- <button style="vertical-align: middle" onclick="buttonClick()"><span>  
+                Start Game</span></button>-->
+
+
+            <p id="demo"></p>
+     </header>
+     <div id ="myForm">
+    <div class="underscore">
+        <!--key stoke counter-->
+        <input type="text" class="nopaste"/>
+        <input type="text" id="countstroke"/>
+        <span id="count"></span>
+        <!--end of counter-->
+        <p>
+            <ul>
+                <li>
+                    hit refresh, can't create new random word 
+                </li>
+                <li>
+                    wins and losses need fix, 
+                </li>
+                <li>
+
+                </li>
+            </ul>
+        </p>
+   
+    </div>
+    </div>
+
+     <div class="rightguess"><h2>right guess</h2></div>
+     <div class="wrongguess"><h2>wrong guess</h2></div>
+ </div>
+ <script src="js/hangman.js"> </script>
+</body>
+
+</html>

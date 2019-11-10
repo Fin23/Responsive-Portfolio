@@ -1,0 +1,111 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<header><h1> live server </h1></header>
+<body>
+this is html hello world
+
+
+
+    
+    <script src="app.js"></script>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/grid.css">
+    <!--<link rel="stylesheet" href="assets/css/reset.css">-->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+                         <!-- Firebase References -->
+    
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <!--<script src="assets/javascript/firebase.js"></script>-->
+  
+    
+
+                             <title>RPS Game</title>                         
+</head>
+
+
+        <header><h1 id = "fireHeading">Rock and Paper and Scissors Game</h1></header>
+<body>
+    <div class = "rps-wrapper">
+        <div id="events">
+            Welcome to the game everyone
+        </div>
+
+
+<div class="score-board">
+    <div  id ="user-label" class="badge">Player 1</div>
+    <div id ="computer-label" class ="badge">Player 2</div>
+    <span id="user-score">0 :</span>
+    <span id="comp-score">0</span>
+</div>
+
+
+<div class="results">
+    <p>Paper covers rock. you win</p>
+</div>
+
+
+  <div class = "row">
+
+    <div class="four">
+       <div class="choises">
+            <button id="Rock" onclick="rock1()">
+                  <img src="assets/images/rocky.jpg">
+                  Rock
+                        </button>
+                                </div>
+                                    </div>
+<div class = "four">   
+    <div class="choises">
+        <button id="Paper" onclick="paper1()">
+            <img src="assets/images/paper.jpg" alt="rock">
+            Paper
+                </button>
+                    </div>
+                        </div>
+                        
+ <div class = "four">    
+    <div class="choises">
+        <button id="Scissors" onclick="scissors1()">
+            <img src="assets/images/scissors.jpg" alt="rock">
+            Scissors
+                </button>
+                    </div>
+                        </div>   
+                        
+                </div>
+
+<p id="action-message">Make your move punk</p>
+
+   
+
+
+    <div class ="row">  
+    <input type="text" id="chat"> 
+    <button id = "say" onclick="chat1()">Say</button>
+    
+        </div>
+                              <!--JQUERY-->
+                              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                              <!--javascript-->
+  <script src= "assets/javascript/RPS.js"></script>
+  <script src = "assets/javascript/server."></script>
+
+</body>
+</html>
