@@ -108,23 +108,103 @@
 }
 .left-column-home {
     background: #76232f;
-    height: 350px;
-    padding: 4px ;
-    opacity: .8;
+	height: 300px;
+	width:20%;
+    /* padding: 4px ; */
+	opacity: .8;
+	float:left;
 }
 .middle-column-home {
     background: #76232f;
-    height: 350px;
-    padding: 4px;
-    opacity: .8;
+	height: 300px;
+	width:20%;
+    /* padding: 4px; */
+	opacity: .8;
+	/* float:center; */
+	margin-left:300px;
 }
 .right-column-home {
     background: #76232f;
-    height: 350px;
-    padding: 4px;
-    opacity: .8;
+	height: 300px;
+	width:20%;
+    /* padding: 4px; */
+	opacity: .8;
+	float:right;
+	margin-right:400px;
+	margin-bottom:700px;
 }
 .right-column-row3 {
  background: #d7cec7;
  
 }
+
+
+.about-row1 {
+    background-color: black;
+	width: 50%;
+	height:10%;
+	clear: both; /* Clear creates new styles for the next row */
+	padding: 0px;
+	margin: 0px;
+	float:left;
+}
+/*additions to rows and columns */
+
+.about-hero-image-container {
+    object-fit: cover;
+	height: 35%;
+	width:25%;
+	background-image:url("../images/darkbluebackground1.png");
+	margin-left: 5%;
+	margin-top: 3%;
+	border-radius:5%;
+	border:solid skyblue;
+}
+
+.about-contact-home {
+	color:white;
+	background-color:black;
+    height: 50%;
+    /* padding: 4px;
+	opacity: .8;
+	float:center; */
+	width:33%;
+	text-align:center;
+	border-radius:3%;
+	float:center;
+	margin-left: 10%;
+	margin-top:15%;
+}
+
+
+.projectRow {
+	width: 90%;
+	height:100px;
+	background:lightpink;
+	opacity:90%;
+	clear: both; /* Clear creates new styles for the next row */
+	padding: 0px;
+	margin: 0px;
+}
+
+
+* {
+	box-sizing: border-box;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+	  text-align: center;
+	float: left;
+	width: 30%;
+	margin:10px;
+	padding: 10px;
+	height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .projectRow:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
