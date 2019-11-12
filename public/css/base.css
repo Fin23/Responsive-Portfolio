@@ -177,6 +177,7 @@
 .demo--current {
 	/* opacity: 0.5; */
 	color:#c06e84;
+	padding-right: 20px;
 }
 
 @media screen and (min-width: 55em) {

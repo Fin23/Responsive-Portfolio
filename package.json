@@ -4,8 +4,8 @@
   "description": "new portfolio",
   "main": "server.js",
   "scripts": {
-   "lint":"eslint .",
-   "lint:fix":"eslint . --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "start": "node server.js"
   },
   "author": "ross jameson",
