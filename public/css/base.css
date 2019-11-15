@@ -151,6 +151,16 @@
 	display: block;
 	
 }
+.skills{
+	list-style-type: none;
+	border-style: none;
+}
+.skills:hover{
+	/* font-size:2.5em;
+	color: #e33056; */
+   
+    /* transition: .5s; */
+}
 
 .github1 {
 	display: block;

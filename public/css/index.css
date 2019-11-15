@@ -205,8 +205,9 @@ button:focus {
 }
 li:hover {
     color: #e33056;
-    border: 1px solid #292929;
-    transition: .5s;
+    font-size:2em;
+   
+    transition: .4s;
 }
 .rowA{
     width: 100%;
@@ -249,7 +250,7 @@ li:hover {
     width: 100%;
 	clear: both; /* Clear creates new styles for the next row */
 	padding: 0px;
-    margin: 0px;
+    margin-bottom: 400px;
     text-align: center;
     font-size:1.4em;
 }
