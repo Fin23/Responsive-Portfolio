@@ -16,6 +16,7 @@
 	margin: 0;
 	position: relative;
 	font-weight: normal;
+	display: inherit;
 }
 
 .content__subtitle {
@@ -61,6 +62,11 @@
 	/* original image below */
 	/* background-image: url(../img/bg.jpg); */
 }
+#proPic img{
+	
+	height: 200px;
+	width:125px;
+}
 
 #content-4 {
 	background-image: url(../img/bg1.jpg);
@@ -75,7 +81,8 @@
 }
 
 #content-5 {
-	background-image: url(../img/bg4.jpg);
+	/* background-image: url(../img/bg4.jpg); */
+	background-image: url(../img/whiteDestinyEsk.jpg);
 }
 
 #content-6 {
