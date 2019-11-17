@@ -179,7 +179,7 @@
 
 .projectRow {
 	width: 90%;
-	height:100px;
+	/* height:100px; */
 	background:lightpink;
 	opacity:90%;
 	clear: both; /* Clear creates new styles for the next row */
