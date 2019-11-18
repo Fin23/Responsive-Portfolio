@@ -263,6 +263,16 @@ li:hover {
     /* width: 350px; */
     /* float: right; */
 }
+.email1{
+    font-size: 1.4em;
+    color: #c06e84;
+    margin-top:30px;
+}
+.RJ{
+    font-size: 2em;
+    color: #c06e84;
+    margin-top: 90px;
+}
 @media screen and (max-width:850px) {
     .column{
       width:100%; /* The width is 100%, when the viewport is 800px or smaller */

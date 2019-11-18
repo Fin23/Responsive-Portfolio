@@ -179,6 +179,7 @@
 
 .projectRow {
 	width: 90%;
+	z-index: 10;
 	/* height:100px; */
 	background:lightpink;
 	opacity:90%;

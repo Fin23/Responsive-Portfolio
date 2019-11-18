@@ -112,6 +112,7 @@
 	position: relative;
 	z-index: 100;
 	display: flex;
+	font-size: 10px;
 }
 
 .codrops-header__title {
@@ -149,7 +150,7 @@
 
 .github {
 	display: block;
-	margin-left: 40px;
+	/* margin-left: 40px; */
 }
 .skills{
 	list-style-type: none;
@@ -174,7 +175,7 @@
 }
 
 .content {
-	position: relative;
+	/* position: relative; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -190,8 +191,8 @@
 		font-family: Georgia, 'Times New Roman', Times, serif;
 		text-align: center;
 	}
-	#RJ{
-		font-size:3em!important;
+	h2{
+		text-size-adjust: 6em!important;
 	}
 	
 }
@@ -249,9 +250,8 @@ width:15%;
 	text-align: center;
 }
 .content--fixed{
-	height: 100px;
-	font-size: 12px;
-	
+	height: 60px;
+    font-size: 8px;
     justify-content: left;
     text-align: left;
     background-color: aqua;
@@ -272,7 +272,7 @@ width:15%;
 	h2, h1{
 		position: relative;
 		color:#c06e84;
-		font-size:1em!important;
+		
 		display: flex;
 		justify-content: center;
 		align-items: center;
