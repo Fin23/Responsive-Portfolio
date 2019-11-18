@@ -180,7 +180,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: relative;
+	/* position: relative; */
 }
 @media only screen and (min-width : 760px){
 	.about-me{
