@@ -184,8 +184,9 @@
 	background:lightpink;
 	opacity:90%;
 	clear: both; /* Clear creates new styles for the next row */
-	padding: 0px;
+	padding: 15px;
 	margin: 0px;
+	
 }
 
 

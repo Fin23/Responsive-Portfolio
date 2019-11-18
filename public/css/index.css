@@ -264,13 +264,13 @@ li:hover {
     /* float: right; */
 }
 .email1{
-    font-size: 1.4em;
-    color: #c06e84;
-    margin-top:30px;
+    font-size: 2.5em;
+    color: black;
+    font-family: cinzel;
 }
 .RJ{
-    font-size: 2em;
-    color: #c06e84;
+    font-size: 4em;
+    color: black;
     margin-top: 90px;
 }
 @media screen and (max-width:850px) {
@@ -281,12 +281,10 @@ li:hover {
         width:100%;
         height:100%;
     }
-    #PM{
-        /* width:300px!important; */
-    }
-/* .row {
-	width: 100%;
-	clear: both; Clear creates new styles for the next row 
-	padding: 0px;
-	margin: 0px;
-} */
+  .RJ{
+      font-size: 2em;
+  }
+  .email1{
+      font-size: 1.4em;
+  }
+}

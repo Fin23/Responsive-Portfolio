@@ -150,6 +150,7 @@
 
 .github {
 	display: block;
+	color: #c06e84;
 	/* margin-left: 40px; */
 }
 .skills{
@@ -179,6 +180,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 }
 @media only screen and (min-width : 760px){
 	.about-me{
@@ -263,7 +265,7 @@ width:15%;
 .github{
 	/* float:left; */
 	margin-right:30px;
-	color:black;
+	
 }
 .demo--current{
 	color:#c06e84;
