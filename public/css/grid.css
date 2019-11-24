@@ -181,10 +181,10 @@
 	width: 90%;
 	z-index: 10;
 	/* height:100px; */
-	background:lightpink;
+	/* background:lightpink; */
 	opacity:90%;
 	clear: both; /* Clear creates new styles for the next row */
-	padding: 15px;
+	padding: 60px;
 	margin: 0px;
 	
 }

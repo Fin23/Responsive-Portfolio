@@ -151,6 +151,7 @@
 .github {
 	display: block;
 	color: #c06e84;
+	font-size: 20px;
 	/* margin-left: 40px; */
 }
 .skills{
@@ -253,10 +254,13 @@ width:15%;
 }
 .content--fixed{
 	height: 60px;
-    font-size: 8px;
+    font-size: 8px!important;
     justify-content: left;
     text-align: left;
     background-color: aqua;
+}
+header{
+	font-size:12px!important;
 }
 .skills{
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -279,6 +283,15 @@ width:15%;
 		justify-content: center;
 		align-items: center;
 	}
+	.content__title {
+		font-family: 'Cinzel Decorative', cursive;
+		font-size: 2em!important;
+		margin: 0;
+		position: relative;
+		font-weight: normal;
+		display: inherit;
+		color: white;
+	}
 }
 
 .content--switch {
@@ -289,6 +302,7 @@ width:15%;
 	/* opacity: 0.5; */
 	color:#c06e84;
 	padding-right: 20px;
+	font-size:20px;
 }
 
 @media screen and (min-width: 55em) {

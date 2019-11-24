@@ -11,12 +11,13 @@
 }
 
 .content__title {
-	/* font-family: 'Cinzel Decorative', cursive; */
-	font-size: 6em;
-	margin: 0;
-	position: relative;
-	font-weight: normal;
-	display: inherit;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 4em;
+    margin: 0;
+    position: relative;
+    font-weight: normal;
+    display: inherit;
+    color: gold;
 }
 
 .content__subtitle {
@@ -86,7 +87,7 @@
 }
 
 #content-6 {
-	background-image: url(../img/sad\ sunflower.jpg);
+	background-image: url(../img/city.gif);
 }
 
 @media screen and (min-width: 55em) {
