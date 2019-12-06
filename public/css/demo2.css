@@ -38,6 +38,11 @@
 
 .menu-trigger {
 	display: none;
+	color: gold!important;
+}
+.menu-trigger:hover{
+	font-size: 4em;
+	transition: 0.05s;
 }
 
 .grim {

@@ -229,10 +229,18 @@ a {
 	/* color: var(--color-link); */
 	outline: none;
 }
+.myResume:hover{
+    color:black;
+    font-size:36px;
+    transition: 0.5s;
+}
+.myResume{
+    transition: 0.5s;
+}
 
 a:hover,
 a:focus {
-    color:#c06e84;
+    /*  */
 	/* color: var(--color-link-hover); */
 	outline: none;
 }
@@ -278,7 +286,8 @@ li:hover {
    
 }
 .row1:hover{
-  color:#c06e84;
+    color:black;
+  /* color:#c06e84; */
    
 }
 .row2{
@@ -343,8 +352,15 @@ header{
 }
 .email1{
     font-size: 2.5em;
-    color: black;
+  
     font-family: cinzel;
+    transition:.5s;
+
+}
+.email1:hover{
+    color:black!important;
+    font-size: 3em;
+    transition:.5s;
 }
 .RJ{
     font-size: 4em;
